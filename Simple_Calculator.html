@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var firstinput=prompt("Enter The First Number:")
+        var opeartor=prompt("Enter the listed operations ( + , - , * , / ):")
+        var secondinput=prompt("Enter The Second Number:")
+
+        var a=parseInt(firstinput)
+        var b=parseInt(secondinput)
+
+        const operatorArr = ['+','-','*','/']
+
+        const myOperator = operatorArr.find((element) => element === opeartor)
+
+        if (myOperator=='+'){
+            alert(a+b);
+        }
+
+        else if (myOperator=='-'){
+            alert(a-b);
+        }
+
+        else if (myOperator=='*'){
+            alert(a*b);
+        }
+
+        else if (myOperator=='/'){
+
+            if(b==0){
+                alert("The second variable must not be zero")
+            }
+            else{
+                alert(a/b);
+            }
+
+        }
+
+        else{
+
+            if(!myOperator){
+                alert("The Operator you are chosing is not available");
+            }
+        }
+
+        // console.log(myOperator);  -->it will return the operator if the myOperator is valid.
+        // console.log(!myOperator);  -->it will return False if the myOperator is valid.
+
+
+    </script>
+</body>
+</html>
